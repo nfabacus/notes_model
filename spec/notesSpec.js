@@ -21,4 +21,23 @@ if (list.viewNotes().length === 4) {
   console.log(false);
 }
 
-var view = new NoteView(list);
+
+var list = new NoteList();
+list.addNote("I am Ben.");
+list.addNote("I am a coder.");
+var listView = new NoteListView(list.viewNotes());
+var htmlStr = listView.html();
+if (htmlStr === "<ul><li><div>I am Ben.</div></li><li><div>I am a coder.</div></li></ul>"){
+  console.log(true);
+} else {
+  console.log(false);
+}
+
+var list = new NoteList();
+var listView = new NoteListView(list.viewNotes());
+var htmlStr = listView.html();
+if (htmlStr === ""){
+  console.log(true);
+} else {
+  console.log(false);
+}

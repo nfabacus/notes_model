@@ -1,9 +1,19 @@
 (function(exports) {
 
-  function NoteView() {
-
+  function NoteListView(list) {
+    this.list = list;
   }
+  NoteListView.prototype.html = function() {
+    var string = "";
+      if (this.list.length !== 0) {
 
-  exports.NoteView = NoteView;
+        this.list.forEach(function(item){
+          string +="<li><div>"+item.note+"</div></li>";
+        });
+        string = "<ul>" + string + "</ul>";
+      }
+    return string;
+  };
+  exports.NoteListView = NoteListView;
 
 })(this);
