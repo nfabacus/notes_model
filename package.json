@@ -1,0 +1,22 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfabacus/notes_model.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nfabacus/notes_model/issues"
+  },
+  "homepage": "https://github.com/nfabacus/notes_model#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
