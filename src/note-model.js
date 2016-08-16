@@ -9,18 +9,5 @@
     return this.note;
   };
 
-
-
   exports.Note = Note;
 })(this);
-
-
-
-
-//
-//
-// var note = function() {
-//    return "Hello";
-// };
-// // var note = new Note();
-// module.exports = note;

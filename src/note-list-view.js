@@ -5,10 +5,11 @@
   }
   NoteListView.prototype.html = function() {
     var string = "";
+     this.list
       if (this.list.length !== 0) {
 
         this.list.forEach(function(item){
-          string +="<li><div>"+item.note+"</div></li>";
+          string +="<li><div>"+item.viewNote()+"</div></li>";
         });
         string = "<ul>" + string + "</ul>";
       }

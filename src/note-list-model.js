@@ -4,10 +4,6 @@
     this.list = [];
   }
 
-  // NoteList.prototype.addNote = function(textNote) {
-  //   this.list.push(new Note(textNote));
-  // }
-
   NoteList.prototype = {
     viewNotes: function() {
       return this.list;
