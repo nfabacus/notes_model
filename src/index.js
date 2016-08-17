@@ -1,2 +1,2 @@
-noteController = new NoteController();
+noteController = new NoteController("Favourite drink: seltzer");
 noteController.outputHtml();

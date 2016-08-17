@@ -1,8 +1,8 @@
 (function(exports) {
 
-  function NoteController() {
+  function NoteController(note) {
     var noteList = new NoteList();
-    noteList.addNote("Favourite drink: seltzer"); //it creates note object with this string.
+    noteList.addNote(note); //it creates note object with this string.
     this.noteListView = new NoteListView(noteList.viewNotes()); //.viewNotes returns notes objects.
   }
   NoteController.prototype.outputHtml = function() {
