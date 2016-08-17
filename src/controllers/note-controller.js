@@ -10,12 +10,13 @@
 (function(exports){
 
   function noteController(list){
-
     this.view = new ListView(list);
-
-    document.getElementById("app").innerHTML = this.view.turnIntoHtml();
+  
+      noteController.prototype.addToIndex = function() {
+        document.getElementById("app").innerHTML =
+          this.view.turnIntoHtml();
+      };
   }
-
 exports.noteController = noteController;
-
+//
 }) (this);

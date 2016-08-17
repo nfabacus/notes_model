@@ -1,6 +1,7 @@
-var list;
+var list, controller;
 
 list = new noteList();
 list.createNote("Favourite drink: seltzer");
 
-new noteController(list);
+controller = new noteController(list);
+controller.addToIndex();
