@@ -1,4 +1,3 @@
-
 function testNoteWorking () {
  var note = new Note('Hello');
   if (note.getText() !== 'Hello') {
