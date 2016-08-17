@@ -6,15 +6,13 @@ function noteListView(notelist) {
 };
 
 noteListView.prototype.noteListModel = function () {
- var listarray = this.notelist.getNotes;
- var arrayLength = listarray.length;
+ var listarray = this.notelist.getNotes();
 
-
-  for (var i = 0; i < arrayLength; i++) {
+ console.log("<ul>")
+  for (var i = 0; i < listarray.length; i++) {
      console.log("<li>" + listarray[i].text +"</li>");
    };
-
-
+ console.log("</ul>")
 };
   exports.noteListView = noteListView;
 })(this);
