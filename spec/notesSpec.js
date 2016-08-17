@@ -3,7 +3,7 @@
 
   console.log("Note:");
   var note = new Note(myNote);
-  if (note.viewNote() === myNote) {
+  if (note.NoteCanStoreText() === myNote) {
     console.log("Test passes. Note can take input and output the same value.");
   } else {
     console.log("Test fails. Note does not take input and output the same value.");
@@ -42,7 +42,7 @@
     console.log("Test fails. notelistview.html failed to add html tags to notes and did not return it correctly.");
   }
 
-  console.log("NoteListView: Insert no notes.");
+  console.log("NoteListView: Insert no note.");
   var list = new NoteList();
   var listView = new NoteListView(list.viewNotes());
   var htmlStr = listView.html("hello, world!");
