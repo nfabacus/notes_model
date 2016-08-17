@@ -2,7 +2,6 @@
   "name": "note-model",
   "version": "1.0.0",
   "description": "notes app",
-  "main": "assert.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

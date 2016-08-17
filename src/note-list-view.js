@@ -12,8 +12,7 @@
       });
         string = "<ul>" + string + "</ul>";
     }
-      console.log(string);
-      return string;
+    return string;
   }
 
 exports.NoteListView = NoteListView;

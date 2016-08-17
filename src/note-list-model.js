@@ -4,7 +4,6 @@
     this.notes = [];
   }
   NoteList.prototype.displayList = function(){
-    console.log("display the list");
     return this.notes;
   };
 
