@@ -1,20 +1,21 @@
 (function(exports) {
 
-  function NoteListView(list) {
+  function NoteListView(list){
     this.list = list;
   }
-  NoteListView.prototype.html = function() {
-    var string = "";
-     this.list
-      if (this.list.length !== 0) {
 
-        this.list.forEach(function(item){
-          string +="<li><div>"+item.viewNote()+"</div></li>";
-        });
+  NoteListView.prototype.outputWeb = function() {
+    var string ="";
+    if(this.list.length !==0) {
+      this.list.forEach(function(note){
+        string +="<li><div>"+note.text.substring(0,20)+"</div></li>";
+      });
         string = "<ul>" + string + "</ul>";
-      }
-    return string;
+    }
+      console.log(string);
+      return string;
   };
-  exports.NoteListView = NoteListView;
+
+exports.NoteListView = NoteListView;
 
 })(this);

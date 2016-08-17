@@ -1,13 +1,13 @@
 (function(exports) {
-  var EXCLAMATION_MARK_COUNT = 5
 
-  function Note(note) {
-    this.note = note;
+  function Note(string){
+    this.text = string;
   }
 
-  Note.prototype.viewNote = function(){
-    return this.note;
+  Note.prototype.NoteCanStoreText = function(){
+    console.log("note can store text");
+    return this.text;
   };
 
-  exports.Note = Note;
+exports.Note = Note;
 })(this);

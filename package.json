@@ -1,8 +1,8 @@
 {
-  "name": "notes",
+  "name": "note-model",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "notes app",
+  "main": "assert.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nfabacus/notes_model/issues"
+    "url": "https://github.com/alwinruby/note-model/issues"
   },
-  "homepage": "https://github.com/nfabacus/notes_model#readme",
+  "homepage": "https://github.com/alwinruby/note-model#readme",
   "dependencies": {
     "http-server": "^0.9.0"
   }

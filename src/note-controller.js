@@ -1,16 +1,15 @@
 (function(exports) {
 
-  function NoteController(note) {
-    var noteList = new NoteList();
-    noteList.addNote(note); //it creates note object with this string.
-    this.noteListView = new NoteListView(noteList.viewNotes()); //.viewNotes returns notes objects.
-  }
-  NoteController.prototype.outputHtml = function() {
-      var element = document.getElementById("app");
-      element.innerHTML = this.noteListView.html();
+  function NoteController(text){
+    var list = new NoteList();
+    list.addNote(text);
+    this.noteListView = new NoteListView(list.displayList());
   }
 
+  NoteController.prototype.insertHTML = function() {
+    var element = document.getElementById("app");
+    element.innerHTML = this.noteListView.outputWeb();
+  };
 
   exports.NoteController = NoteController;
-
 })(this);
