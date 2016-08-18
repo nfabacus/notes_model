@@ -5,7 +5,7 @@ function testListView_one() {
   list.createNote("Hello Nobuyuki Fujioka Hello Nobuyuki Fujioka");
   var listView = new ListView(list);
   if (listView.turnIntoHtml() ===
-   "<ul><li><div>Hello Nobuyuki Fujio</div></li><li><div>Hello Nobuyuki Fujio</div></li></ul>" ) {
+   "<ul><li><div><a href=#0>Hello Nobuyuki Fujio</a></div></li><li><div><a href=#1>Hello Nobuyuki Fujio</a></div></li></ul>" ) {
     console.log("testListView:creates an HTML string of 20c: passed");
   }
   else {

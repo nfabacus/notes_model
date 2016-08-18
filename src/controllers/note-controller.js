@@ -5,6 +5,7 @@
 
 (function(exports){
   var List;
+
   function noteController(list){
     this.view = new ListView(list);
     List = this.view.listOfNotes;
@@ -18,15 +19,18 @@
   noteController.prototype.loadContent = function(){
     window.addEventListener("hashchange", this.getContent);
     console.log("This is our list2:", List);
-  }
+  };
 
   noteController.prototype.getContent = function () {
-      var id = window.location.hash.split("#")[1];
+    var id = window.location.hash.split("#")[1];
+    console.log("id:", id);
+    if (typeof id !== "undefined"){
+      var singleNoteView = new SingleNoteView(List.notes[id]);
+      var singleNoteHTML = singleNoteView.outputHTML();
+      console.log("This is our list3:", List);
+      document.getElementById("app2").innerHTML = singleNoteHTML;
+    }
 
-    var singleNoteView = new SingleNoteView(List.notes[id]);
-    var singleNoteHTML = singleNoteView.outputHTML();
-    console.log("This is our list3:", List);
-    document.getElementById("app2").innerHTML = singleNoteHTML;
 
   };
 

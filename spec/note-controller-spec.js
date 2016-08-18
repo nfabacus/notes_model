@@ -39,14 +39,21 @@ function testNoteController_3 () {
   // window.location.ha="0";
   //   var id = window.location.hash.split("#")[1];
   // var id = 0;
-  controller.getContent();
-  var displayStr = document.getElementById("app2").innerHTML;
-  console.log("displayStr", displayStr);
-  if (displayStr === '<ul><li><div><a href="#0">testing testing 123 hello world cool</a></div></li></ul>') {
-    console.log("loading content. Passed.");
-  } else {
-    console.log("loading content. Failed.");
+  controller.addToIndex();
+  controller.loadContent();
+  window.addEventListener("hashchange", checkContent);
+
+  function checkContent(){
+    var displayStr = document.getElementById("app2").innerHTML;
+    console.log("displayStr", displayStr);
+    if (displayStr === '<div>testing testing 123 hello world cool</div>') {
+      console.log("loading content. Passed.");
+    } else {
+      console.log("loading content. Failed.");
+    }
+
   }
+
 
 
 }
