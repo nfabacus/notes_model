@@ -12,7 +12,8 @@
     var HtmlString ="";
 
       this.listOfNotes.notes.forEach(function(note){
-        HtmlString += "<li><div>" + note.text.substring(0,20)+ "</div></li>";
+
+        HtmlString += "<li><div><a href=#" + note.id + ">" + note.text.substring(0,20)+ "</a></div></li>";
       });
       finalString = openTag + HtmlString + closeTag;
       return finalString;

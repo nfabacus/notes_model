@@ -1,10 +1,4 @@
-//1. Code in a file called note-list-view.js.
 
-//2. Takes a note list model upon instantiation.
-
-//3. Has a method that, when called, returns a string of HTML that represents the note list model.
-// For example: <ul><li><div>Favourite food: pesto</div></li><li><div>Favourite drink: seltzer</div></li></ul>.
-//4. Handles a note list model that has no notes, one note or several notes.
 function testListView_one() {
   var list = new noteList();
   list.createNote("Hello Nobuyuki Fujioka Hello Nobuyuki Fujioka");
@@ -28,9 +22,23 @@ function testListView_two(){
   else {
     console.log("testListView: works for empty lists: failed");
   }
+}
+
+function testListView_three(){
+  var list = new noteList();
+  list.createNote("Hello Nobuyuki Fujioka Hello Nobuyuki Fujioka");
+  var listView = new ListView(list);
+  if (listView.turnIntoHtml() ===
+"<ul><li><div><a href=#0>Hello Nobuyuki Fujio</a></div></li></ul>" ) {
+    console.log("testListView: adds a href tag: passed");
+  }
+  else {
+    console.log("testListView: adds a href tag: failed");
+  }
 
 }
 
 
 testListView_one();
 testListView_two();
+testListView_three();
