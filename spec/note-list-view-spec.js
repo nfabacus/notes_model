@@ -7,15 +7,15 @@
 //4. Handles a note list model that has no notes, one note or several notes.
 function testListView_one() {
   var list = new noteList();
-  list.createNote("hello");
-  list.createNote("nomi");
+  list.createNote("Hello Nobuyuki Fujioka Hello Nobuyuki Fujioka");
+  list.createNote("Hello Nobuyuki Fujioka Hello Nobuyuki Fujioka");
   var listView = new ListView(list);
   if (listView.turnIntoHtml() ===
-   "<ul><li><div>hello</div></li><li><div>nomi</div></li></ul>" ) {
-    console.log("testListView:creates an HTML string: passed");
+   "<ul><li><div>Hello Nobuyuki Fujio</div></li><li><div>Hello Nobuyuki Fujio</div></li></ul>" ) {
+    console.log("testListView:creates an HTML string of 20c: passed");
   }
   else {
-    console.log("testListView:creates an HTML string:failed");
+    console.log("testListView:creates an HTML string of 20c: failed");
   }
 }
 

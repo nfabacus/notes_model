@@ -12,7 +12,7 @@
     var HtmlString ="";
 
       this.listOfNotes.notes.forEach(function(note){
-        HtmlString += "<li><div>" + note.text + "</div></li>";
+        HtmlString += "<li><div>" + note.text.substring(0,20)+ "</div></li>";
       });
       finalString = openTag + HtmlString + closeTag;
       return finalString;
