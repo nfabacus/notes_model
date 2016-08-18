@@ -8,8 +8,13 @@
 
   <body>
 
-    <div id="app">list view</div>
-    <div id="app2">single note</div>
+    <form action="#test" method="post">
+      <textarea rows="8" cols="40" id="text"></textarea>
+      <input type="submit" value="Create">
+    </form>
+    <div id="app"></div>
+    <div id="app2"></div>
+
     <script src="./src/note-model.js"></script>
     <script src="./src/single-note-view.js"></script>
     <script src="./src/note-list-model.js"></script>
