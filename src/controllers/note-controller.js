@@ -1,22 +1,37 @@
-// Takes a note list model upon instantiation.
-// Adds a note that says Favourite drink: seltzer.
-// (You could create another file, index.js, to instantiate the NoteController from.)
-// Sets up a note list view with the note list model passed in.
-// Has a method that gets HTML from the note list view
-// and inserts it into the app element.
-//
+// Using TDD, update your note-controller.js to load content for the single note page. The note controller code should listen for hashchange events. When one happens, if the new browser URL is for a single note page, it should use the app element to set the web page content to the HTML for that note.
+//  Go to http://localhost:8080 in your browser. You should be able to click on a note and see the full text of that note. There should be no page refresh.
+
 
 
 (function(exports){
-
+  var List;
   function noteController(list){
     this.view = new ListView(list);
-
-      noteController.prototype.addToIndex = function() {
-        document.getElementById("app").innerHTML =
-          this.view.turnIntoHtml();
-      };
+    List = this.view.listOfNotes;
+    console.log("This is our list1:", List);
   }
+  noteController.prototype.addToIndex = function() {
+    document.getElementById("app").innerHTML =
+      this.view.turnIntoHtml();
+  };
+
+  noteController.prototype.loadContent = function(){
+    window.addEventListener("hashchange", this.getContent);
+    console.log("This is our list2:", List);
+  }
+
+  noteController.prototype.getContent = function () {
+      var id = window.location.hash.split("#")[1];
+
+    var singleNoteView = new SingleNoteView(List.notes[id]);
+    var singleNoteHTML = singleNoteView.outputHTML();
+    console.log("This is our list3:", List);
+    document.getElementById("app2").innerHTML = singleNoteHTML;
+
+  };
+
+
+
 exports.noteController = noteController;
-//
+
 }) (this);

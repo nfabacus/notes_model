@@ -5,3 +5,4 @@ list.createNote("Favourite drink: seltzer");
 
 controller = new noteController(list);
 controller.addToIndex();
+controller.loadContent();
