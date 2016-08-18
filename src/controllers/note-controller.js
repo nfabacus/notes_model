@@ -36,9 +36,7 @@
     var form = document.getElementById("note-form");
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      console.log("event triggered:", e);
-
-      // console.log("Note data received from form:", e.target[0].value);
+      console.log("submitted note text from form:", e.target[0].value);
     });
   };
 
