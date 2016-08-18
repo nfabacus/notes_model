@@ -1,16 +1,20 @@
 function testNoteController() {
   var notelist = new NoteList;
-  notelist.createNote("Seltzzerr");
+//   console.log(1);
+  notelist.createNote("Favorite Drink: Seltzer");
+//   console.log(2);
   var notecontroller = new NoteController(notelist);
-  notecontroller.writeNotesListInToHtml();
-  console.log(element);
-  console.log("here");
+//   console.log(3);
+  notecontroller.insertHTML();
+//   console.log(notecontroller.writeNotesListInToHtml());
+//   console.log(4);
   var element = document.getElementById("app");
-
-  if (notecontroller.writeNotesListInToHtml() === element) {
-    console.log("testNoteController: This has passed")
+//   console.log(5);
+//   console.log(element);
+  if (element.innerHTML === "<ul><li>Favorite Drink: Seltzer</li></ul>") {
+    console.log("testNoteController: This has passed");
   } else {
-    console.log("testNoteController: This has failed")
+    console.log("testNoteController: This has failed");
   }
 };
 testNoteController();

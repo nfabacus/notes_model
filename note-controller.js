@@ -4,16 +4,27 @@
  // console.log(element);
 
 (function(exports) {
-
+//
    function NoteController(notelist) {
+    // notelist.createNote("");
     this.notelistview = new noteListView(notelist);
-    console.log(this.notelistview);
   };
 
-  NoteController.prototype.writeNotesListInToHtml = function () {
-    var element = document.getElementById("app")
-
-    element.innerHTML = this.notelistview.returnArrayAsHtml();
-  };
+    NoteController.prototype.insertHTML = function() {
+      var element = document.getElementById("app");
+      element.innerHTML = this.getListView().returnArrayAsHtml();
+    };
+    NoteController.prototype.getListView = function() {
+      return this.notelistview;
+    };
+//
+//   NoteController.prototype.getHtmlTag = function () {
+//     return document.getElementById("app")
+//     console.log(element, 1);
+//   };
+// //
+//   NoteController.prototype.writeNotesListInToHtml = function () {
+//    this.notelistview.returnArrayAsHtml().innerHTML;
+//   };
   exports.NoteController = NoteController;
 })(this);
