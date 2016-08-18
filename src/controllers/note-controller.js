@@ -11,7 +11,7 @@
 
   function noteController(list){
     this.view = new ListView(list);
-  
+
       noteController.prototype.addToIndex = function() {
         document.getElementById("app").innerHTML =
           this.view.turnIntoHtml();

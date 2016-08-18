@@ -20,13 +20,14 @@ function testNoteController(){
 
 function testNoteController_2(){
   var list = new noteList();
-  list.createNote("testing testing 123");
-  var myList = list.getAllNotes();
 
-  var controller = new noteController(myList);
+  list.createNote("testing testing 123");
+
+  var controller = new noteController(list);
   controller.addToIndex();
+
   if (document.getElementById("app").innerHTML ===
- "testing testing 123") {
+ "<ul><li><div>testing testing 123</div></li></ul>") {
     console.log("controller.addToIndex method: passed");
   }
   else {

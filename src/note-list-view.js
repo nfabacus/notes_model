@@ -7,20 +7,16 @@
 
   ListView.prototype.turnIntoHtml = function () {
 
-    var wholeHtmlString = "<ul>" + this.listingFunction(this.listOfNotes) + "</ul>";
-    return wholeHtmlString;
+    var openTag = "<ul>";
+    var closeTag = "</ul>";
+    var HtmlString ="";
 
-  };
-
-  ListView.prototype.listingFunction = function(someList) {
-
-    var stringArray = [];
-    someList.getAllNotes().forEach(function(note) {
-      stringArray.push("<li><div>" + note.text + "</div></li>");
-    });
-    return stringArray.join("");
-
-  };
+      this.listOfNotes.notes.forEach(function(note){
+        HtmlString += "<li><div>" + note.text + "</div></li>";
+      });
+      finalString = openTag + HtmlString + closeTag;
+      return finalString;
+    };
 
   exports.ListView = ListView;
 
