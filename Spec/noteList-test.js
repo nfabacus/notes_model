@@ -1,7 +1,5 @@
 function viewNoteList() {
  var list = new NoteList();
- var totalList = list.getNotes();
- var testfor = "NoteList can create note's and store them"
 
  list.createNote("this is note1")
 

@@ -9,11 +9,11 @@
   };
 
   NoteList.prototype.storeNote = function (note) {
-     this.notes.push(note);
+    this.notes.push(note);
   };
 
   NoteList.prototype.createNote = function (text) {
- this.storeNote(new Note(text));
+    this.storeNote(new Note(text));
   };
   exports.NoteList = NoteList;
 

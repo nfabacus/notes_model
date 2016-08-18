@@ -3,16 +3,19 @@
 
 function noteListView(notelist) {
   this.notelist = notelist
+
 };
 
-noteListView.prototype.noteListModel = function () {
+noteListView.prototype.returnArrayAsHtml = function () {
  var listarray = this.notelist.getNotes();
-
- console.log("<ul>")
-  for (var i = 0; i < listarray.length; i++) {
-     console.log("<li>" + listarray[i].text +"</li>");
-   };
- console.log("</ul>")
+ var html;
+ if (listarray.length !== 0) {
+  html = "<ul>";
+    for (var i = 0; i < listarray.length; i++) {
+      html += "<li>" + listarray[i].text +"</li>";
+    };
+  html += "</ul>";
+  return html };
 };
   exports.noteListView = noteListView;
 })(this);
