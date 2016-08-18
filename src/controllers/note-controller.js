@@ -30,9 +30,19 @@
       console.log("This is our list3:", List);
       document.getElementById("app2").innerHTML = singleNoteHTML;
     }
-
-
   };
+
+  noteController.prototype.receiveNoteFromForm = function(){
+    var form = document.getElementById("note-form");
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      console.log("event triggered:", e);
+
+      // console.log("Note data received from form:", e.target[0].value);
+    });
+  };
+
+
 
 
 

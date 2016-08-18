@@ -10,3 +10,4 @@ list.createNote("Note3: Knausgaard mlkshk meditation jean shorts, pop-up marfa s
 controller = new noteController(list);
 controller.addToIndex();
 controller.loadContent();
+controller.receiveNoteFromForm();
