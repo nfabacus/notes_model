@@ -38,6 +38,19 @@ function testCreateNote(){
   }
 }
 
+function testNoteHasUniqueID() {
+  var list = new noteList();
+  list.createNote('Here is my note.');
+  list.createNote('This is my note.');
+  if (list.notes[1].id === 1) {
+    console.log("note id was created. Passed.");
+  } else {
+    console.log("note id was not created. Failed.");
+  }
+}
+
+
 testHasArrayOfNotes();
 testCreateNote();
 testReturnsArrayofNotes();
+testNoteHasUniqueID();
