@@ -1,4 +1,3 @@
-
 function testListView_one() {
   var list = new noteList();
   list.createNote("Hello Nobuyuki Fujioka Hello Nobuyuki Fujioka");
