@@ -1,23 +1,21 @@
 (function(exports) {
 
-  function ListView(list) {
+  function ListView(noteListObj) {
 
-    this.listOfNotes = list;
+    this.listOfNotes = noteListObj;
   }
 
   ListView.prototype.turnIntoHtml = function () {
-
-    var openTag = "<ul>";
-    var closeTag = "</ul>";
-    var HtmlString ="";
-
+    if(this.listOfNotes.notes.length > 0){
+      var HtmlString ="";
       this.listOfNotes.notes.forEach(function(note){
 
         HtmlString += "<li><div><a href=#" + note.id + ">" + note.text.substring(0,20)+ "</a></div></li>";
       });
-      finalString = openTag + HtmlString + closeTag;
+      finalString = "<ul>" + HtmlString + "</ul>";
       return finalString;
-    };
+    }
+  };
 
   exports.ListView = ListView;
 
