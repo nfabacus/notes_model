@@ -9,7 +9,8 @@ noteListView.prototype.returnArrayAsHtml = function () {
  var html;
  html = "<ul>";
 
-listarray.forEach(function(listarray){ html += "<li>" + listarray.text.substring(0,20) +"</li>" })
+listarray.forEach(function(listarray){ html += "<li><a href=#"+listarray.id+ ">" + listarray.text.substring(0,20) + "</a></li>" })
+
   html += "</ul>";
   return html;
 };

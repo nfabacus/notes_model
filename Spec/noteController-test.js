@@ -7,7 +7,7 @@ function testNoteController() {
 
   var element = document.getElementById("app");
 
-  if (element.innerHTML === "<ul><li>Favorite Drink: Seltzer</li></ul>") {
+  if (element.innerHTML === '<ul><li><a href="#0">Favorite Drink: Selt</a></li></ul>') {
     console.log("testNoteController: This has passed");
   } else {
     console.log("testNoteController: This has failed");
