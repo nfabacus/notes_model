@@ -6,7 +6,7 @@ function testNoteController(){
   // var list = new noteList();
   // list.createNote("testing testing 123");
   var lists;
-  var controller = new noteController(lists);
+  var controller = new NoteController(lists);
   if (controller !== null) {
     console.log("note controller can be instantiated: passed");
   }
@@ -20,27 +20,28 @@ function testNoteController_2(){
 
   list.createNote("testing testing 123");
 
-  var controller = new noteController(list);
-  controller.addToIndex();
+  var controller = new NoteController(list);
+  controller.displayListInPage();
 
+console.log(document.getElementById("app").innerHTML);
   if (document.getElementById("app").innerHTML ===
- "<ul><li><div>testing testing 123</div></li></ul>") {
-    console.log("controller.addToIndex method: passed");
+ '<ul><li><div><a href="#0">testing testing 123</a></div></li></ul>') {
+    console.log("controller.displayListInPage method: passed");
   }
   else {
-    console.log("controller.addToIndex method: failed");
+    console.log("controller.displayListInPage method: failed");
   }
 }
 
 function testNoteController_3 () {
   var list = new noteList();
   list.createNote("testing testing 123 hello world cool");
-  var controller = new noteController(list);
+  var controller = new NoteController(list);
   // window.location.ha="0";
   //   var id = window.location.hash.split("#")[1];
   // var id = 0;
-  controller.addToIndex();
-  controller.loadContent();
+  controller.displayListInPage();
+  controller.ListenToHashChangeToDisplaySingleNote();
   window.addEventListener("hashchange", checkContent);
 
   function checkContent(){
